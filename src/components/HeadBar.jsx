@@ -1,14 +1,33 @@
-import LanguageToggle from "./LanguageToggle";
-import WaveEmoji from "./WaveEmoji";
+import React from 'react';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Filler,
+  Legend,
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Filler,
+    Legend
+  );
 
 
 export default function HeadBar() {
     return (
-        <div className="flex justify-between">
-            <div className="green-gradient capitalize font-medium text-2xl">Hi Crossval</div>
-            <div>
-                {/* <LanguageToggle/> */}
-            </div>
+        <div>
+            
         </div>
     )
 };
