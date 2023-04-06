@@ -1,12 +1,12 @@
 
-import HeadBar from "./components/HeadBar"
+import ChartSect from "./components/ChartSect"
 
 function App() {
 
 
   return (
     <div className="App">
-      <HeadBar/>
+      <ChartSect/>
     </div>
   )
 }

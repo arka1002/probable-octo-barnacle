@@ -24,7 +24,6 @@ ChartJS.register(
 );
 // set `maintainAspectRatio: false` to give the height & width  
 export const options = {
-    responsive: true,
     maintainAspectRatio: false,
     plugins: {
         legend: {
@@ -86,11 +85,13 @@ export const data = {
 
 export default function HeadBar() {
     return (
-        <div>
+        <>
+            
             <Line
                 options={options}
                 data={data}
-                height={400} />
-        </div>
+                height={400} 
+                width={600}/>
+        </>
     )
 };
