@@ -11,7 +11,7 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-
+// initialising the chart.js
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -20,18 +20,43 @@ ChartJS.register(
     Title,
     Tooltip,
     Filler,
-    Legend
+    Legend,
 );
-
+// set `maintainAspectRatio: false` to give the height & width  
 export const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
         legend: {
-            position: 'top',
+            display: true,
+            boxWidth: 10,
+            usePointStyle: true,
+            pointStyle: 'circle',
+            labels: {
+                usePointStyle: true,
+            },
         },
         title: {
-            display: true,
-            text: 'Chart.js Line Chart',
+            display: false
+        },
+    },
+    scales: {
+        x: {
+            display: false,
+        },
+        y: {
+            suggestedMin: 10,
+            suggestedMax: 40,
+            grid: {
+                borderDash: true ? [8, 4] : null,
+                drawBorder: false,
+            },
+            ticks: {
+                padding: 18,
+                beginAtZero: false,
+                // tickWidth : ,
+                
+            },
         },
     },
 };
@@ -43,10 +68,17 @@ export const data = {
     datasets: [
         {
             fill: true,
-            label: 'Dataset 2',
-            data: [10, 20, 30, 40, 50],
-            borderColor: 'rgb(53, 162, 235)',
-            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+            label: 'Expenses Data',
+            data: [0, 0, 0, 0, 0],
+            borderColor: '#ff0000',
+            backgroundColor: '#ffacac',
+        },
+        {
+            fill: true,
+            label: 'Revenue Data',
+            data: [46200, 106800, 181800, 272700, 390300],
+            borderColor: '#14937e',
+            backgroundColor: 'rgba(164, 213, 205, 0.5)',
         },
     ],
 };
@@ -55,7 +87,11 @@ export const data = {
 export default function HeadBar() {
     return (
         <div>
-            <Line options={options} data={data} />
+            <Line
+                options={options}
+                data={data}
+                width={400}
+                height={250} />
         </div>
     )
 };
