@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.green-gradient {
+    background: linear-gradient(#0e7469, #2bae95);
+    background-clip: text;
+    color: transparent;
+}
