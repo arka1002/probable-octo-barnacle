@@ -48,7 +48,7 @@ export const options = {
             suggestedMin: 10,
             suggestedMax: 40,
             grid: {
-                borderDash: true ? [8, 4] : null,
+                borderDash: [8, 4],
                 drawBorder: false,
             },
             ticks: {
@@ -90,8 +90,7 @@ export default function HeadBar() {
             <Line
                 options={options}
                 data={data}
-                width={400}
-                height={250} />
+                height={400} />
         </div>
     )
 };
