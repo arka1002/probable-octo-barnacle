@@ -38,7 +38,7 @@ export const options = {
     }
 }
 
-export default function PieChart() {
+export default function DoughNutChart() {
     return (
         <div className='p-4 rounded-xl shadow-lg'>
         <div className='font-bold'>Revenue vs Cost</div>

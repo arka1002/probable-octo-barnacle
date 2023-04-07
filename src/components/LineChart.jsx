@@ -85,7 +85,7 @@ export const data = {
 };
 
 
-export default function HeadBar() {
+export default function LineChart() {
     return (
         <>
             

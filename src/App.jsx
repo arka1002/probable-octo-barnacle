@@ -1,4 +1,4 @@
-import PieChart from "./components/PieChart"
+import PieChart from "./components/DoughNutChart"
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       {/* <ChartSect/> */}
-      <PieChart/>
+      {/* <PieChart/> */}
     </div>
   )
 }
