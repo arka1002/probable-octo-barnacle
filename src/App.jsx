@@ -12,7 +12,9 @@ function App() {
       {/* <PieChart/> */}
       {/* <PieChart/>
       <DoughNutChart/> */}
-      <Card />
+      <Card>
+        123456
+      </Card>
     </div>
   )
 }
