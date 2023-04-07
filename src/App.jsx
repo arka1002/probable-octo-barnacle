@@ -1,7 +1,5 @@
-import DoughNutChart from "./components/DoughNutChart"
-import PieChart from "./components/PieChart"
 
-import { ReactComponent as Hen } from '../src/assets/react.svg'
+import Card from "./components/Card"
 
 
 
@@ -14,7 +12,7 @@ function App() {
       {/* <PieChart/> */}
       {/* <PieChart/>
       <DoughNutChart/> */}
-      <Hen/>
+      <Card />
     </div>
   )
 }
