@@ -87,7 +87,7 @@ export const data = {
 
 export default function LineChart() {
     return (
-        <div className='className="px-4 py-4 mt-6 bg-white rounded-lg"'>
+        <div className='p-4 rounded-lg bg-white mt-6'>
             <div className="text-xl font-semibold">Graph Chart</div>
             <div>
                 <Line
