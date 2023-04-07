@@ -1,12 +1,13 @@
+import PieChart from "./components/PieChart"
 
-import ChartSect from "./components/ChartSect"
 
 function App() {
 
 
   return (
     <div className="App">
-      <ChartSect/>
+      {/* <ChartSect/> */}
+      <PieChart/>
     </div>
   )
 }

@@ -41,7 +41,9 @@ export const options = {
     },
     scales: {
         x: {
-            display: false,
+            grid: {
+                display: false
+            }
         },
         y: {
             suggestedMin: 10,
