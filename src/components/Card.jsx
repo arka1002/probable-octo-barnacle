@@ -1,5 +1,3 @@
-import { ReactComponent as Icon } from "../assets/person.svg"
-
 
 export default function Card({ children }) {
     return (
