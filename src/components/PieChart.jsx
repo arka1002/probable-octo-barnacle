@@ -40,13 +40,14 @@ export const options = {
 
 export default function PieChart() {
     return (
-        <>
-            <Doughnut
+        <div className='p-4 rounded-xl shadow-lg'>
+        <div className='font-bold'>Revenue vs Cost</div>
+            <div><Doughnut
                 data={data}
                 options={options}
                 height={280}
                 width={385} />
-
-        </>
+            </div>
+        </div>
     )
 };
