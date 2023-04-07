@@ -40,8 +40,8 @@ export const options = {
 
 export default function DoughNutChart() {
     return (
-        <div className='p-4 rounded-xl shadow-lg'>
-        <div className='font-bold'>Revenue vs Cost</div>
+        <div className='p-4 rounded-xl shadow-lg bg-white'>
+            <div className='font-bold'>Revenue vs Cost</div>
             <div><Doughnut
                 data={data}
                 options={options}
