@@ -56,7 +56,7 @@ export const options = {
                 padding: 18,
                 beginAtZero: false,
                 // tickWidth : ,
-                
+
             },
         },
     },
@@ -87,13 +87,15 @@ export const data = {
 
 export default function LineChart() {
     return (
-        <>
-            
-            <Line
-                options={options}
-                data={data}
-                height={400} 
-                width={600}/>
-        </>
+        <div className='className="px-4 py-4 mt-6 bg-white rounded-lg"'>
+            <div className="text-xl font-semibold">Graph Chart</div>
+            <div>
+                <Line
+                    options={options}
+                    data={data}
+                    height={400}
+                    width={600} />
+            </div>
+        </div>
     )
 };

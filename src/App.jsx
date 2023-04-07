@@ -4,6 +4,7 @@ import { ReactComponent as Finger } from './assets/finger.svg'
 import { ReactComponent as Stopwatch } from './assets/stopwatch.svg'
 import DoughNutChart from "./components/DoughNutChart"
 import PieChart from "./components/PieChart"
+import LineChart from "./components/LineChart"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <DoughNutChart/>
           <PieChart/>
         </div>
+        <div><LineChart/></div>
       </div>
     </>
   )
