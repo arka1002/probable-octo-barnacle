@@ -10,13 +10,13 @@ function App() {
   return (
     <>
       <div className="grid grid-cols-3 gap-6">
-        <Card>
+        <Card title={`Arka`} numbers={100}>
           <Person/>
         </Card>
-        <Card>
+        <Card title={`Pratim`} numbers={200}>
           <Finger/>
         </Card>
-        <Card>
+        <Card title={`Chaudhuri`} numbers={300}>
           <Stopwatch/>
         </Card>
       </div>
