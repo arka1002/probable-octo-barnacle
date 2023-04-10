@@ -32,22 +32,26 @@ export default function DCF() {
             <div className="bg-white p-7">
                 <div className="text-xs text-[#9F9F9F]">The DCF (Discounted Cash Flow) methods represent the most renown approach to company valuation, recommended by academics and a daily tool for financial analysts. The valuation is the present value of all the free cash flows to equity the startup is going to generate in the future, discounted by its risk. These methods weight the projected free cash flow to equity by the probability the startup will survive. Then, the flows are discounted to present by a rate that represents risks related to industry, size, development stage and profitability. Lastly, an illiquidity discount is applied to the sum of the discounted cash flows to compute the valuation.</div>
                 <table className="w-full py-4">
-                    <tr>
-                        <th scope="col">{` `}</th>
-                        {data.headers.map(header => <th scope="col" className="text-center py-4">{header}</th>)}
-                    </tr>
-                    {items.map(item => (
-                        <>
-                            <tr>
-                                <td className="grid place-items-center py-4"><Pen /></td>
-                                <td className="text-center py-4">{item.year}</td>
-                                <td className="text-center py-4">{item.discountRate}</td>
-                                <td className="text-center py-4">{item.ltgr}</td>
-                                <td className="text-center py-4">{item.sr}</td>
-                                <td className="text-center py-4">{item.ebita}</td>
-                            </tr>
-                        </>
-                    ))}
+                    <thead className="border-b border-[#1FC39E]">
+                        <tr>
+                            <th scope="col">{` `}</th>
+                            {data.headers.map(header => <th scope="col" className="text-center py-4 text-[#1FC39E] font-bold text-sm">{header}</th>)}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {items.map(item => (
+                            <>
+                                <tr className="border-b">
+                                    <td className="grid place-items-center py-4"><Pen /></td>
+                                    <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.year}</td>
+                                    <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.discountRate}</td>
+                                    <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.ltgr}</td>
+                                    <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.sr}</td>
+                                    <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.ebita}</td>
+                                </tr>
+                            </>
+                        ))}
+                    </tbody>
                 </table>
             </div>
             <div>

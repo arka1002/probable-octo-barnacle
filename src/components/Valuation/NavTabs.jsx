@@ -17,7 +17,7 @@ export default function NavTabs() {
                         <div className={currentTab === 'sc' ? activeStyle : defaultStyle} onClick={() => setCurrentTab('sc')}>Score Card</div>
                         <div className={currentTab === 'compara' ? activeStyle : defaultStyle} onClick={() => setCurrentTab('compara')}>Comparables</div>
                     </div>
-                    <div>b</div>
+                    <div className="py-3 pr-8 text-red-600 hover:text-red-400 cursor-pointer">Reset</div>
                 </div>
                 <div><ConditionalConnector tab={currentTab}/></div>
             </div>
