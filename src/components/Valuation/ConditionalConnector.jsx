@@ -1,3 +1,4 @@
+import Comparables from "./Comparables";
 import DCF from "./DCF";
 import ScoreCard from "./ScoreCard";
 import VC from "./VC";
@@ -10,7 +11,7 @@ export default function ConditionalConnector({ tab }) {
     } else if (tab === 'vc') {
         return (<VC/>)
     }
-    else {
-        return (<>Yet to be done!</>)
+    else if (tab === 'compara') {
+        return (<Comparables/>)
     }
 };
