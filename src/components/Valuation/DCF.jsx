@@ -10,14 +10,23 @@ export default function DCF() {
             "Survival Rate",
             "Discounted EBITA"
         ],
-        row1: [
-            "2025",
-            "0.40",
-            "0.01",
-            "1.00",
-            "179502"
-        ]
     }
+    const items = [
+        {
+            year: "2025",
+            discountRate: "0.40",
+            ltgr: "0.01",
+            sr: "1.00",
+            ebita: "179502"
+        },
+        {
+            year: "2025",
+            discountRate: "0.40",
+            ltgr: "0.01",
+            sr: "1.00",
+            ebita: "179502"
+        }
+    ]
     return (
         <>
             <div className="bg-white p-7">
@@ -27,10 +36,18 @@ export default function DCF() {
                         <th scope="col">{` `}</th>
                         {data.headers.map(header => <th scope="col" className="text-center py-4">{header}</th>)}
                     </tr>
-                    <tr>
-                        <td className="grid place-items-center py-4"><Pen/></td>
-                        {data.row1.map(row => <td className="text-center py-4">{row}</td>)}
-                    </tr>
+                    {items.map(item => (
+                        <>
+                            <tr>
+                                <td className="grid place-items-center py-4"><Pen /></td>
+                                <td className="text-center py-4">{item.year}</td>
+                                <td className="text-center py-4">{item.discountRate}</td>
+                                <td className="text-center py-4">{item.ltgr}</td>
+                                <td className="text-center py-4">{item.sr}</td>
+                                <td className="text-center py-4">{item.ebita}</td>
+                            </tr>
+                        </>
+                    ))}
                 </table>
             </div>
             <div>
