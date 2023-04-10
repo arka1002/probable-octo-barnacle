@@ -6,11 +6,12 @@ import DoughNutChart from "./components/Dashboard/DoughNutChart"
 import PieChart from "./components/Dashboard/PieChart"
 import LineChart from "./components/Dashboard/LineChart"
 import SliderSection from "./components/Dashboard/SliderSection"
+import NavTabs from "./components/Valuation/NavTabs"
 
 function App() {
   return (
     <>
-      <div className="grid grid-cols-3 gap-6">
+      {/* <div className="grid grid-cols-3 gap-6">
         <Card title={`Arka`} numbers={100}>
           <Person />
         </Card>
@@ -28,8 +29,8 @@ function App() {
           <PieChart />
         </div>
         <div><LineChart /></div>
-      </div>
-      {/* <InputRange/> */}
+      </div> */}
+      <NavTabs/>
     </>
   )
 }
