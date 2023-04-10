@@ -11,26 +11,26 @@ import SliderSection from "./components/SliderSection"
 function App() {
   return (
     <>
-      {/* <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-6">
         <Card title={`Arka`} numbers={100}>
-          <Person/>
+          <Person />
         </Card>
         <Card title={`Pratim`} numbers={200}>
-          <Finger/>
+          <Finger />
         </Card>
         <Card title={`Chaudhuri`} numbers={300}>
-          <Stopwatch/>
+          <Stopwatch />
         </Card>
       </div>
+      <SliderSection />
       <div className="mt-4 p-6 rounded-xl bg-[#f3f3ff]">
         <div className="grid grid-cols-3 gap-4">
-          <DoughNutChart/>
-          <PieChart/>
+          <DoughNutChart />
+          <PieChart />
         </div>
-        <div><LineChart/></div>
-      </div> */}
+        <div><LineChart /></div>
+      </div>
       {/* <InputRange/> */}
-      <SliderSection/>
     </>
   )
 }
