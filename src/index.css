@@ -8,3 +8,12 @@
     background-clip: text;
     color: transparent;
 }
+
+/* .test {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+.test::-webkit-slider-thumb {
+    -webkit-appearance: none;
+} */

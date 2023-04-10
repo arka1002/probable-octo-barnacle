@@ -1,0 +1,23 @@
+.special {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+.special::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+.special:focus {
+    outline: none;
+}
+
+.special::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}

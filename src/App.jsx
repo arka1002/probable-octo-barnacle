@@ -5,11 +5,12 @@ import { ReactComponent as Stopwatch } from './assets/stopwatch.svg'
 import DoughNutChart from "./components/DoughNutChart"
 import PieChart from "./components/PieChart"
 import LineChart from "./components/LineChart"
+import InputRange from "./components/InputRange"
 
 function App() {
   return (
     <>
-      <div className="grid grid-cols-3 gap-6">
+      {/* <div className="grid grid-cols-3 gap-6">
         <Card title={`Arka`} numbers={100}>
           <Person/>
         </Card>
@@ -26,7 +27,8 @@ function App() {
           <PieChart/>
         </div>
         <div><LineChart/></div>
-      </div>
+      </div> */}
+      <InputRange/>
     </>
   )
 }
