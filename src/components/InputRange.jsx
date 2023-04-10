@@ -9,8 +9,8 @@ export default function InputRange() {
         <>
             <div className='pt-16'>
                 <div className='relative'>
-                    <p className={styles.upperp}>{value}</p>
-                    <span className={styles.upperspan}></span>
+                    <p className={styles.upperp} style={{ left: `${value}%` }}>{value}</p>
+                    <div className={styles.upperspan} style={{ left: `${value}%` }}></div>
                 </div>
                 {/* Needed to add CSS Modules because tailwind css doesnt support the necessary pseudo-elements required for styling */}
                 <input
@@ -25,7 +25,6 @@ export default function InputRange() {
                         backgroundImage: `linear-gradient(to right, #0e7469  0%, #1fc39e ${value}%, #d9d9d9 ${value}%, #d9d9d9 100%)`,
                     }} 
                     />
-                <p>{value}</p>
             </div>
         </>
     );
