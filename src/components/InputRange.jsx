@@ -9,10 +9,10 @@ export default function InputRange() {
         <>
             <div className='pt-16'>
                 <div className='relative'>
+                    {/* Needed to add CSS Modules because tailwind css doesnt support the necessary pseudo-elements required for styling */}
                     <p className={styles.upperp} style={{ left: `${value}%` }}>{value}</p>
                     <div className={styles.upperspan} style={{ left: `${value}%` }}></div>
                 </div>
-                {/* Needed to add CSS Modules because tailwind css doesnt support the necessary pseudo-elements required for styling */}
                 <input
                     type="range"
                     id="test"

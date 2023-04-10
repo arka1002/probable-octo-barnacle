@@ -6,6 +6,7 @@ import DoughNutChart from "./components/DoughNutChart"
 import PieChart from "./components/PieChart"
 import LineChart from "./components/LineChart"
 import InputRange from "./components/InputRange"
+import SliderSection from "./components/SliderSection"
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
         </div>
         <div><LineChart/></div>
       </div> */}
-      <InputRange/>
+      {/* <InputRange/> */}
+      <SliderSection/>
     </>
   )
 }

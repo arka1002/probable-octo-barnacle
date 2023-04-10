@@ -3,6 +3,7 @@
     width: 100%;
     background: transparent;
     height: 8px;
+    border-radius: 0.5rem;
 }
 
 .special::-webkit-slider-thumb {
