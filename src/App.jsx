@@ -30,7 +30,8 @@ function App() {
         </div>
         <div><LineChart /></div>
       </div> */}
-      <NavTabs/>
+      <SliderSection />
+      <div className="mt-4"><NavTabs /></div>
     </>
   )
 }
