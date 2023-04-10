@@ -28,7 +28,7 @@ export default function SC() {
     ]
     return (
         <>
-            <div className="p-7 bg-white">
+            <div className="p-7 bg-white shadow-md">
                 <div className="flex flex-row-reverse pb-4 items-center">
                     <div className="flex gap-2 cursor-pointer items-center text-[#14937E]">
                         <div>Add Value Driver</div>
@@ -63,6 +63,9 @@ export default function SC() {
                         </tr>
                     </tbody>
                 </table>
+                <div className="flex justify-end">
+                    <button className="py-3 px-6 rounded-md my-4 bg-[#1FC39E] text-white">Update Scorecard</button>
+                </div>
             </div>
         </>
     )
