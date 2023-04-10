@@ -2,6 +2,7 @@
     -webkit-appearance: none;
     width: 100%;
     background: transparent;
+    height: 8px;
 }
 
 .special::-webkit-slider-thumb {
