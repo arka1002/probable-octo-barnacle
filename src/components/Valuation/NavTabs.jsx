@@ -5,8 +5,8 @@ import ConditionalConnector from "./ConditionalConnector";
 
 export default function NavTabs() {
     const [ currentTab, setCurrentTab ] = useState('dcf');
-    const defaultStyle = "py-3 px-4 cursor-pointer"
-    const activeStyle = "py-3 px-4 cursor-pointer bg-white text-blue-400"
+    const defaultStyle = "py-3 px-4 cursor-pointer font-semibold text-gray-400"
+    const activeStyle = "py-3 px-4 cursor-pointer bg-white text-black font-semibold rounded-tl-lg rounded-tr-lg"
     return (
         <>
             <div className="p-2 rounded-lg bg-[#f3f3ff]">
