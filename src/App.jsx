@@ -5,8 +5,12 @@
 // import DoughNutChart from "./components/Dashboard/DoughNutChart"
 // import PieChart from "./components/Dashboard/PieChart"
 // import LineChart from "./components/Dashboard/LineChart"
-import SliderSection from "./components/Dashboard/SliderSection"
-import NavTabs from "./components/Valuation/NavTabs"
+// import SliderSection from "./components/Dashboard/SliderSection"
+// import NavTabs from "./components/Valuation/NavTabs"
+
+import SourceTable from "./components/Expenses/SourceTable"
+
+
 
 function App() {
   return (
@@ -30,8 +34,9 @@ function App() {
         </div>
         <div><LineChart /></div>
       </div> */}
-      <SliderSection />
-      <div className="mt-4"><NavTabs /></div>
+      {/* <SliderSection />
+      <div className="mt-4"><NavTabs /></div> */}
+      <SourceTable/>
     </>
   )
 }
