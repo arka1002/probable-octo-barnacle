@@ -66,49 +66,49 @@ export default function SourceTable() {
                                         <td className="w-8 px-2 py-4"><div className="flex justify-center"><Dustbin className="cursor-not-allowed opacity-40" /></div></td>
                                         <td className="px-2 py-4 text-sm font-semibold text-[#252F40]">{item.source}</td>
                                         <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center gap-2">
                                                 {item.y2023}
                                                 <Expand />
                                             </div>
                                         </td>
                                         <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center gap-2">
                                                 {item.y2024}
                                                 <Expand />
                                             </div>
                                         </td>
                                         <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center gap-2">
                                                 {item.y2025}
                                                 <Expand />
                                             </div>
                                         </td>
                                         <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center gap-2">
                                                 {item.y2026}
                                                 <Expand />
                                             </div>
                                         </td>
                                         <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center gap-2">
                                                 {item.y2027}
                                                 <Expand />
                                             </div>
                                         </td>
                                         <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center gap-2">
                                                 {item.y2028}
                                                 <Expand />
                                             </div>
                                         </td>
                                         <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center gap-2">
                                                 {item.y2029}
                                                 <Expand />
                                             </div>
                                         </td>
                                         <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center gap-2">
                                                 {item.y2030}
                                                 <Expand />
                                             </div>
