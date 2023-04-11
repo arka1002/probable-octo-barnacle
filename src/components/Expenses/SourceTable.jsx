@@ -1,5 +1,6 @@
 import { ReactComponent as Plus } from "../../assets/plus.svg";
 import { ReactComponent as Dustbin } from "../../assets/dustbin.svg";
+import { ReactComponent as Expand } from "../../assets/expand.svg";
 
 
 export default function SourceTable() {
@@ -19,25 +20,25 @@ export default function SourceTable() {
     const items = [
         {
             source: "Cost of Sales",
-            2023: "$1,123",
-            2024: "$1,123",
-            2025: "$1,123",
-            2026: "$1,123",
-            2027: "$1,123",
-            2028: "$1,123",
-            2029: "$1,123",
-            2030: "$1,123",
+            y2023: "$1,123",
+            y2024: "$1,123",
+            y2025: "$1,123",
+            y2026: "$1,123",
+            y2027: "$1,123",
+            y2028: "$1,123",
+            y2029: "$1,123",
+            y2030: "$1,123",
         },
         {
             source: "Salaries",
-            2023: "$1,123",
-            2024: "$1,123",
-            2025: "$1,123",
-            2026: "$1,123",
-            2027: "$1,123",
-            2028: "$1,123",
-            2029: "$1,123",
-            2030: "$1,123",
+            y2023: "$1,123",
+            y2024: "$1,123",
+            y2025: "$1,123",
+            y2026: "$1,123",
+            y2027: "$1,123",
+            y2028: "$1,123",
+            y2029: "$1,123",
+            y2030: "$1,123",
         }
     ]
     return (
@@ -58,6 +59,48 @@ export default function SourceTable() {
                                 {data.headers.map(header => <th className="w-32 px-1 py-4 text-sm font-bold lg:px-3 text-[#1FC39E]">{header}</th>)}
                             </tr>
                         </thead>
+                        <tbody>
+                            {items.map(item => (
+                                <>
+                                    <tr className="border-b-2">
+                                        <td className="w-8 px-2 py-4"><div className="flex justify-center"><Dustbin className="cursor-not-allowed opacity-40"/></div></td>
+                                        <td className="px-2 py-4 text-sm font-semibold text-[#252F40]">{item.source}</td>
+                                        <td className="px-2 py-4 text-sm flex justify-center font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                                            {item.y2023}
+                                            <Expand/>
+                                        </td>
+                                        <td className="px-2 py-4 text-sm flex justify-center font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                                            {item.y2024}
+                                            <Expand/>
+                                        </td>
+                                        <td className="px-2 py-4 text-sm flex justify-center font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                                            {item.y2025}
+                                            <Expand/>
+                                        </td>
+                                        <td className="px-2 py-4 text-sm flex justify-center font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                                            {item.y2026}
+                                            <Expand/>
+                                        </td>
+                                        <td className="px-2 py-4 text-sm flex justify-center font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                                            {item.y2027}
+                                            <Expand/>
+                                        </td>
+                                        <td className="px-2 py-4 text-sm flex justify-center font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                                            {item.y2028}
+                                            <Expand/>
+                                        </td>
+                                        <td className="px-2 py-4 text-sm flex justify-center font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                                            {item.y2029}
+                                            <Expand/>
+                                        </td>
+                                        <td className="px-2 py-4 text-sm flex justify-center font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                                            {item.y2030}
+                                            <Expand/>
+                                        </td>
+                                    </tr>
+                                </>
+                            ))}
+                        </tbody>
                     </table>
                 </div>
             </div>
