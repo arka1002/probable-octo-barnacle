@@ -52,7 +52,7 @@ export default function SourceTable() {
                     </button>
                 </div>
                 <div>
-                    <table className="w-full bg-white">
+                    <table className="w-full bg-white rounded-lg shadow-md">
                         <thead className="border-b border-[#1FC39E]">
                             <tr>
                                 <th></th>
