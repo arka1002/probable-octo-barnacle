@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Table = () => {
+const RTable = () => {
   const [data, setData] = useState();
   const [toggle, setToggle] = useState(false);
 
@@ -154,7 +154,7 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default RTable;
 const TableHeadingItem = ({ title, centerTitle = true }) => {
   return (
     <th
