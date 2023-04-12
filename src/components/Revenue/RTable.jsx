@@ -5,6 +5,7 @@ import { ReactComponent as Expand } from "../../assets/expand.svg";
 const RTable = () => {
   const [time, setTime] = useState('year')
   const [month, setMonth] = useState('')
+  const [details, setDetails] = useState('')
 
   const values = [
     {
@@ -58,6 +59,7 @@ const RTable = () => {
       setTime('month')
       const map_1 = values.find(x => x.id === id);
       setMonth(map_1.month);
+      setDetails(map_1.score);
     } else {
       setTime('year')
     }
@@ -73,7 +75,8 @@ const RTable = () => {
           test2={test2}
           yearIDS={yearIDS}
           change={(id) => GetDetails(id)}
-          month={month} />
+          month={month}
+          details={details} />
       </div>
     </div>
   );
@@ -81,11 +84,11 @@ const RTable = () => {
 
 export default RTable;
 
-function Connector({ time, head, test2, yearIDS, change, month }) {
+function Connector({ time, head, test2, yearIDS, change, month, details }) {
   if (time == 'year') {
     return (<YearTable head={head} test2={test2} yearIDS={yearIDS} change={change} />)
   } else {
-    return (<MonthTable month={month} />)
+    return (<MonthTable month={month} details={details} change={change} />)
   }
 }
 
@@ -117,7 +120,7 @@ function YearTable({ head, test2, yearIDS, change }) {
         <tbody>
           <tr className="border-b-2">
             <td className="w-8 px-2 py-4"><div className="flex justify-center"><Dustbin className="cursor-not-allowed opacity-40" /></div></td>
-            <td className="px-2 py-4 text-sm font-semibold text-[#252F40]">Source</td>
+            <td className="px-2 py-4 text-sm text-center font-semibold text-[#252F40]">Source</td>
             {test.map(x => <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
               <div className="flex justify-center gap-2">
                 {x.val}
@@ -132,7 +135,7 @@ function YearTable({ head, test2, yearIDS, change }) {
 }
 
 
-function MonthTable({ month }) {
+function MonthTable({ month, details, change }) {
   return (
     <>
       <table className="w-full bg-white">
@@ -145,6 +148,18 @@ function MonthTable({ month }) {
             }
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            <td className="px-2 py-4 text-sm font-semibold text-center text-[#252F40]">Source</td>
+            <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+              <div className="flex justify-center gap-2">
+                {details[0]}
+                <Expand onClick={() => change(0)} />
+              </div>
+            </td>
+            {details.slice(1).map(x => <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40]">{x}</td>)}
+          </tr>
+        </tbody>
       </table>
     </>
   )

@@ -8,18 +8,18 @@
 // import SliderSection from "./components/Dashboard/SliderSection"
 // import NavTabs from "./components/Valuation/NavTabs"
 
-import SourceTable from "./components/Expenses/SourceTable";
-import Expenses from "./components/IncomeStatement/Expenses";
-import Table from "./components/Table";
-import RevenueTable from "./components/IncomeStatement/RevenueTable";
+// import SourceTable from "./components/Expenses/SourceTable";
+// import Expenses from "./components/IncomeStatement/Expenses";
+// import Table from "./components/Table";
+// import RevenueTable from "./components/IncomeStatement/RevenueTable";
 // import EditableRow from "./components/CapTable/EditableRow";
-import ReadOnlyRow from "./components/CapTable/ReadOnly";
-import Revenue from "./components/IncomeStatement/Revenue";
-import CapTable from "./components/CapTable/CapTable";
-import Ebita from "./components/IncomeStatement/Ebitda";
+// import ReadOnlyRow from "./components/CapTable/ReadOnly";
+// import Revenue from "./components/IncomeStatement/Revenue";
+// import CapTable from "./components/CapTable/CapTable";
+// import Ebita from "./components/IncomeStatement/Ebitda";
 import RTable from "./components/Revenue/RTable";
-import BurnAnalysis from "./components/BurnAnalysis/BurnAnalysis";
-import BTable from "./components/BurnAnalysis/BTable";
+// import BurnAnalysis from "./components/BurnAnalysis/BurnAnalysis";
+// import BTable from "./components/BurnAnalysis/BTable";
 
 function App() {
   return (
@@ -53,8 +53,8 @@ function App() {
       {/* <ReadOnlyRow /> */}
       {/* <CapTable /> */}
 
-      {/* <RTable /> */}
-      <BurnAnalysis />
+      <RTable />
+      {/* <BurnAnalysis /> */}
       {/* <BTable /> */}
     </>
   );
