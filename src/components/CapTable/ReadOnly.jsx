@@ -5,7 +5,7 @@ import { ReactComponent as EditIcon } from "../../assets/editIcon.svg";
 import { ReactComponent as DeleteIcon } from "../../assets/delete.svg";
 // import { ReactComponent as NotDelete } from "../../../assets/notdelete.svg";
 
-const ReadOnlyRow = () => {
+const ReadOnlyRow = ({ onClick }) => {
   return (
     <tr className="border-b-2 flex items-center">
       <td>
@@ -14,6 +14,7 @@ const ReadOnlyRow = () => {
       <td className="text-customBlue-darkest capitalize text-center font-semibol py-4 px-2">
         <div className="text-center mx-0 flex justify-center">
           <EditIcon
+            onClick={onClick}
             size="1.5rem"
             className="text-customGreen-200 mx-2 text-center cursor-pointer"
           />

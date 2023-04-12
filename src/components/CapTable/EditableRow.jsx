@@ -3,13 +3,14 @@ import { BiSave } from "react-icons/bi";
 import { ReactComponent as Save } from "../../assets/save.svg";
 import { ReactComponent as EditIcon } from "../../assets/editIcon.svg";
 
-const EditableRow = () => {
+const EditableRow = ({ onClick }) => {
   return (
-    <tr className="border-b-2 flex items-center  ">
+    <tr className="border-b-2 flex items-center w-full">
+      <td></td>
       <td></td>
       <td className="text-customBlue-darkest py-2 text-center font-semibold px-2">
         <div className="text-center mx-0 cursor-pointer">
-          <Save className="text-customGreen-200 flex ml-4" />
+          <Save className="text-customGreen-200 flex ml-4" onClick={onClick} />
         </div>
       </td>
       <td className="text-customBlue-darkest py-2 text-center font-semibold  text-sm px-1">
