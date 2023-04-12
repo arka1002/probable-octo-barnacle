@@ -11,7 +11,7 @@ export default function Expenses() {
     };
     const items = [
         {
-            source: "2025",
+            source: "Cost of sales",
             y2023: "0.40",
             y2024: "0.01",
             y2025: "1.00",
@@ -19,7 +19,7 @@ export default function Expenses() {
             y2027: "179502"
         },
         {
-            source: "2025",
+            source: "Salariess",
             y2023: "0.40",
             y2024: "0.01",
             y2025: "1.00",
