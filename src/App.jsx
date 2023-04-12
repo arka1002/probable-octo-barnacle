@@ -17,6 +17,7 @@ import ReadOnlyRow from "./components/CapTable/ReadOnly";
 import Revenue from "./components/IncomeStatement/Revenue";
 import CapTable from "./components/CapTable/CapTable";
 import Ebita from "./components/IncomeStatement/Ebitda";
+import RTable from "./components/Revenue/RTable";
 
 function App() {
   return (
@@ -45,12 +46,12 @@ function App() {
       {/* <SourceTable/> */}
       {/* <Expenses/> */}
       {/* <RevenueTable /> */}
-      {/* <RevenueTable />
-      <Revenue /> */}
-
-      <CapTable />
+      {/* <Revenue /> */}
       {/* <EditableRow /> */}
       {/* <ReadOnlyRow /> */}
+      {/* <CapTable /> */}
+
+      <RTable />
     </>
   );
 }
