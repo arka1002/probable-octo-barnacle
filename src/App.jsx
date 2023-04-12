@@ -12,6 +12,7 @@ import SourceTable from "./components/Expenses/SourceTable";
 import Expenses from "./components/IncomeStatement/Expenses";
 import Table from "./components/Table";
 import RevenueTable from "./components/IncomeStatement/RevenueTable";
+import Revenue from "./components/IncomeStatement/Revenue";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       {/* <SourceTable/> */}
       {/* <Expenses/> */}
       <RevenueTable />
+      <Revenue/>
     </>
   );
 }
