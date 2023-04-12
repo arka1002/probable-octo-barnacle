@@ -3,25 +3,26 @@ import React, { useState } from "react";
 const Table = () => {
   const [data, setData] = useState();
   const [toggle, setToggle] = useState(false);
-  const [details, setDetails] = useState([]);
 
   const yearList = ["2023", "2024", "2025", "2026", "2027", "2028", "2029"];
-  const Values = [
-    "04501",
-    "25471",
-    "65841",
-    "47856",
-    "04501",
-    "25471",
-    "65841",
-  ];
+  const [yr, setYr] = useState(yearList);
 
   const values = [
     {
       id: 1,
       yr: "2023",
       val: "04501",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
+      month: [
+        "2023",
+        "jan",
+        "feb",
+        "mar",
+        "aprl",
+        "may",
+        "june",
+        "july",
+        "aug",
+      ],
       data: ["1", "2", "3", "4", "5", "6", "7", "8"],
     },
     {
@@ -66,17 +67,37 @@ const Table = () => {
       month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
       data: ["1", "2", "3", "4", "5", "6", "7", "8"],
     },
+    {
+      id: 8,
+      yr: "2029",
+      val: "04501",
+      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
+      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
+    },
+    {
+      id: 9,
+      yr: "2029",
+      val: "04501",
+      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
+      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
+    },
   ];
+  const [details, setDetails] = useState(values);
 
   function Get(id) {
     console.log(id);
     setData(
-      [values.find((e) => e.id === id)].map((val) => {
+      [details.find((e) => e.id === id)].map((val) => {
         console.log(val);
-        setDetails(val);
+        setYr(val.month);
+        setDetails(val.data);
       })
     );
     setToggle(!toggle);
+    if (!toggle) {
+      setYr(yearList);
+      setDetails(values);
+    }
   }
 
   return (
@@ -88,7 +109,7 @@ const Table = () => {
               <th className="w-32 px-1 py-4 text-sm font-bold lg:px-3 text-customGreen-200 capitalized">
                 {"Source"}
               </th>
-              {yearList.map((item, i) => (
+              {yr.map((item, i) => (
                 <TableHeadingItem centerTitle={true} title={item} key={i} />
               ))}
             </tr>
@@ -108,16 +129,23 @@ const Table = () => {
               <td className="px-2 py-4 text-sm  font-semibold text-center text-customBlue-darkest">
                 Apple
               </td>
-              {
-                toggle
-              }
-                  {values.map((item, i) => (
+              {/* {details.map((item, i) => (
                     <TableDataItem
+                    
                       value={item.val}
                       key={i}
                       onclick={() => Get(item.id)}
                     />
-                  ))}
+                  ))} */}
+              {details.map((item, id) => (
+                <td
+                  key={id}
+                  onClick={() => Get(item.id)}
+                  className="px-1 py-4 text-sm font-semibold text-center lg:px-3 text-customBlue-100 hover:bg-customGreen-200 hover:text-white"
+                >
+                  {item.val}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
