@@ -16,6 +16,7 @@ import EditableRow from "./components/CapTable/EditableRow";
 import ReadOnlyRow from "./components/CapTable/ReadOnly";
 import Revenue from "./components/IncomeStatement/Revenue";
 import CapTable from "./components/CapTable/CapTable";
+import Ebita from "./components/IncomeStatement/Ebitda";
 
 function App() {
   return (
@@ -49,6 +50,11 @@ function App() {
       {/* <EditableRow /> */}
       {/* <ReadOnlyRow /> */}
       <CapTable />
+      <EditableRow />
+      <ReadOnlyRow />
+      <RevenueTable />
+      <Revenue />
+      <Ebita />
     </>
   );
 }
