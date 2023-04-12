@@ -2,10 +2,13 @@ import React from "react";
 // import { BiSave } from "react-icons/bi";
 import { ReactComponent as Save } from "../../assets/save.svg";
 import { ReactComponent as EditIcon } from "../../assets/editIcon.svg";
+import { ReactComponent as Upload } from "../../assets/uploadIcone.svg";
 
 const EditableRow = ({ onClick }) => {
   return (
     <>
+      <td></td>
+
       <td className="text-customBlue-darkest py-2 text-center font-semibold px-2">
         <div className="text-center mx-0 cursor-pointer">
           <Save className="text-customGreen-200 flex ml-4" onClick={onClick} />
@@ -72,6 +75,17 @@ const EditableRow = ({ onClick }) => {
         <p className="text-center flex justify-center">
           <EditIcon style={{ width: "27px" }} className="cursor-pointer" />
         </p>
+      </td>
+      <td>
+        <div
+          className="cursor-pointer mx-2 bg-customGreen-200 rounded-lg p-1 flex justify-center items-center"
+          onClick={() => handleUploadClick()}
+        >
+          Upload
+          <span className="pl-2">
+            <Upload />
+          </span>
+        </div>
       </td>
     </>
   );
