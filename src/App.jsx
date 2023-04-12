@@ -41,7 +41,7 @@ function App() {
       {/* <SourceTable/> */}
       <Expenses/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
