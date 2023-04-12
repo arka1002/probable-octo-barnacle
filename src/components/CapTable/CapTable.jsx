@@ -29,6 +29,7 @@ const CapTable = () => {
           <tr className="bg-slate-300">
             <td></td>
             <td></td>
+            
             {headingList.map((item, i) => (
               <th
                 className={
@@ -91,13 +92,13 @@ const CapTable = () => {
         </thead>
         <tbody>
           <tr className="w-full">
-            <td>
+            
               {!toggle ? (
                 <ReadOnlyRow onClick={() => ToggleBtn()} />
               ) : (
                 <EditableRow onClick={() => ToggleBtn()} />
               )}
-            </td>
+            
           </tr>
         </tbody>
       </table>

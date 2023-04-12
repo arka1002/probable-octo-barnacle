@@ -50,11 +50,6 @@ function App() {
       {/* <EditableRow /> */}
       {/* <ReadOnlyRow /> */}
       <CapTable />
-      <EditableRow />
-      <ReadOnlyRow />
-      <RevenueTable />
-      <Revenue />
-      <Ebita />
     </>
   );
 }
