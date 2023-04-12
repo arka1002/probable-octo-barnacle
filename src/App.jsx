@@ -9,6 +9,7 @@
 // import NavTabs from "./components/Valuation/NavTabs"
 
 import SourceTable from "./components/Expenses/SourceTable"
+import Table from "./components/Table"
 
 
 
@@ -36,7 +37,8 @@ function App() {
       </div> */}
       {/* <SliderSection />
       <div className="mt-4"><NavTabs /></div> */}
-      <SourceTable/>
+      {/* <SourceTable/> */}
+      <Table/>
     </>
   )
 }
