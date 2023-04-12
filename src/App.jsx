@@ -1,12 +1,18 @@
-import Card from "./components/Dashboard/Card";
-import { ReactComponent as Person } from "./assets/person.svg";
-import { ReactComponent as Finger } from "./assets/finger.svg";
-import { ReactComponent as Stopwatch } from "./assets/stopwatch.svg";
-import DoughNutChart from "./components/Dashboard/DoughNutChart";
-import PieChart from "./components/Dashboard/PieChart";
-import LineChart from "./components/Dashboard/LineChart";
-import SliderSection from "./components/Dashboard/SliderSection";
-import Revenue from "./components/Revenue/Revenue";
+// import Card from "./components/Dashboard/Card"
+// import { ReactComponent as Person } from './assets/person.svg'
+// import { ReactComponent as Finger } from './assets/finger.svg'
+// import { ReactComponent as Stopwatch } from './assets/stopwatch.svg'
+// import DoughNutChart from "./components/Dashboard/DoughNutChart"
+// import PieChart from "./components/Dashboard/PieChart"
+// import LineChart from "./components/Dashboard/LineChart"
+// import SliderSection from "./components/Dashboard/SliderSection"
+// import NavTabs from "./components/Valuation/NavTabs"
+
+import SourceTable from "./components/Expenses/SourceTable"
+import Expenses from "./components/IncomeStatement/Expenses"
+import Table from "./components/Table"
+
+
 
 function App() {
   return (
@@ -29,9 +35,11 @@ function App() {
           <PieChart />
         </div>
         <div><LineChart /></div>
-             <div><Revenue/></div>
-      </div>
-      {/* <InputRange/> */}
+      </div> */}
+      {/* <SliderSection />
+      <div className="mt-4"><NavTabs /></div> */}
+      {/* <SourceTable/> */}
+      <Expenses/>
     </>
   );
 }
