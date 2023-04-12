@@ -8,11 +8,10 @@
 // import SliderSection from "./components/Dashboard/SliderSection"
 // import NavTabs from "./components/Valuation/NavTabs"
 
-import SourceTable from "./components/Expenses/SourceTable"
-import Expenses from "./components/IncomeStatement/Expenses"
-import Table from "./components/Table"
-
-
+import SourceTable from "./components/Expenses/SourceTable";
+import Expenses from "./components/IncomeStatement/Expenses";
+import Table from "./components/Table";
+import RevenueTable from "./components/IncomeStatement/RevenueTable";
 
 function App() {
   return (
@@ -39,7 +38,8 @@ function App() {
       {/* <SliderSection />
       <div className="mt-4"><NavTabs /></div> */}
       {/* <SourceTable/> */}
-      <Expenses/>
+      {/* <Expenses/> */}
+      <RevenueTable />
     </>
   );
 }
