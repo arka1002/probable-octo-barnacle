@@ -11,7 +11,7 @@ import Revenue from "./components/Revenue/Revenue"
 function App() {
   return (
     <>
-      <div className="grid grid-cols-3 gap-6">
+      {/* <div className="grid grid-cols-3 gap-6">
         <Card title={`Arka`} numbers={100}>
           <Person />
         </Card>
