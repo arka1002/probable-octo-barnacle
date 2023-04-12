@@ -14,6 +14,7 @@ import Table from "./components/Table";
 import RevenueTable from "./components/IncomeStatement/RevenueTable";
 import EditableRow from "./components/CapTable/EditableRow";
 import ReadOnlyRow from "./components/CapTable/ReadOnly";
+import Revenue from "./components/IncomeStatement/Revenue";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
       {/* <RevenueTable /> */}
       <EditableRow />
       <ReadOnlyRow />
+      <RevenueTable />
+      <Revenue />
     </>
   );
 }

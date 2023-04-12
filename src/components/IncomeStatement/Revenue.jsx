@@ -1,4 +1,4 @@
-export default function Expenses() {
+export default function Revenue() {
     const data = {
         headers: [
             "Source",
@@ -30,7 +30,7 @@ export default function Expenses() {
     return (
         <>
             <div className="p-6 bg-[#f3f3ff]">
-                <div className="pb-4 text-xl font-bold text-[#14937E]">Expenses</div>
+                <div className="pb-4 text-xl font-bold text-[#14937E]">Revenue</div>
                 <div>
                     <table className="w-full rounded-md shadow-md">
                         <thead className="border-b border-[#1FC39E] bg-white">
