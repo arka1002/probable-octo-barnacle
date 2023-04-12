@@ -83,6 +83,7 @@ const RTable = () => {
     },
   ];
   const [details, setDetails] = useState(values);
+  const [details2, setDetails2] = useState(values);
 
   function Get(id) {
     console.log(id);
@@ -90,13 +91,13 @@ const RTable = () => {
       [details.find((e) => e.id === id)].map((val) => {
         console.log(val);
         setYr(val.month);
-        setDetails(val.data);
+        setDetails2(val.data);
+        console.log("details", details);
       })
     );
     setToggle(!toggle);
     if (!toggle) {
       setYr(yearList);
-      setDetails(values);
     }
   }
 
@@ -137,6 +138,7 @@ const RTable = () => {
                       onclick={() => Get(item.id)}
                     />
                   ))} */}
+
               {details.map((item, id) => (
                 <td
                   key={id}
