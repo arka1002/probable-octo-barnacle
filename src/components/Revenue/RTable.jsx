@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { ReactComponent as Dustbin } from "../../assets/dustbin.svg";
+import { ReactComponent as Expand } from "../../assets/expand.svg";
 
 const RTable = () => {
   const [data, setData] = useState();
-  const [toggle, setToggle] = useState(false);
-
+  // const [toggle, setToggle] = useState(false);
+  const [time, setTime] = useState("year");
   const yearList = ["2023", "2024", "2025", "2026", "2027", "2028", "2029"];
   const [yr, setYr] = useState(yearList);
 
@@ -11,7 +13,6 @@ const RTable = () => {
     {
       id: 1,
       yr: "2023",
-      val: "04501",
       month: [
         "2023",
         "jan",
@@ -23,63 +24,76 @@ const RTable = () => {
         "july",
         "aug",
       ],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
+      score: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
+      test: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
     },
     {
       id: 2,
       yr: "2024",
-      val: "04502",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
+      month: [
+        "2024",
+        "jan",
+        "feb",
+        "mar",
+        "aprl",
+        "may",
+        "june",
+        "july",
+        "aug",
+      ],
+      score: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
+      test: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
     },
     {
       id: 3,
       yr: "2025",
-      val: "04501",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
+      month: [
+        "2025",
+        "jan",
+        "feb",
+        "mar",
+        "aprl",
+        "may",
+        "june",
+        "july",
+        "aug",
+      ],
+      score: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
+      test: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
     },
     {
       id: 4,
       yr: "2026",
-      val: "04501",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
+      month: [
+        "2026",
+        "jan",
+        "feb",
+        "mar",
+        "aprl",
+        "may",
+        "june",
+        "july",
+        "aug",
+      ],
+      score: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
+      test: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
     },
     {
       id: 5,
       yr: "2027",
-      val: "04501",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
-    },
-    {
-      id: 6,
-      yr: "2028",
-      val: "04501",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
-    },
-    {
-      id: 7,
-      yr: "2029",
-      val: "04501",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
-    },
-    {
-      id: 8,
-      yr: "2029",
-      val: "04501",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
-    },
-    {
-      id: 9,
-      yr: "2029",
-      val: "04501",
-      month: ["jan", "feb", "mar", "aprl", "may", "june", "july", "aug"],
-      data: ["1", "2", "3", "4", "5", "6", "7", "8"],
+      month: [
+        "2027",
+        "jan",
+        "feb",
+        "mar",
+        "aprl",
+        "may",
+        "june",
+        "july",
+        "aug",
+      ],
+      score: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
+      test: ["1", "2", "3", "4", "5", "6", "7", "8", "8"],
     },
   ];
   const [details, setDetails] = useState(values);
@@ -100,7 +114,6 @@ const RTable = () => {
       setYr(yearList);
     }
   }
-
   return (
     <div className="container shadow-md bg-white rounded-lg pb-4 ">
       <div className="overflow-x-auto">
@@ -157,26 +170,53 @@ const RTable = () => {
 };
 
 export default RTable;
-const TableHeadingItem = ({ title, centerTitle = true }) => {
-  return (
-    <th
-      className={
-        "py-4 px-1 lg:px-3 font-bold text-sm text-customGreen-200 capitalized" +
-        (centerTitle ? " text-center" : " text-left")
-      }
-    >
-      {title}
-    </th>
-  );
-};
 
-const TableDataItem = ({ value, onclick }) => {
+function Connector({ time, onClick, head, test2 }) {
+  if (time == "year") {
+    return <YearTable head={head} test2={test2} />;
+  } else {
+    return console.log("hello");
+  }
+}
+
+function YearTable({ head, test2 }) {
   return (
-    <td
-      onClick={onclick}
-      className="px-1 py-4 text-sm font-semibold text-center lg:px-3 text-customBlue-100 hover:bg-customGreen-200 hover:text-white"
-    >
-      {value}
-    </td>
+    <>
+      <table className="w-full bg-white">
+        <thead className="border-b border-customGreen-200">
+          <tr>
+            <th></th>
+            <th className="w-32 px-1 py-4 text-sm font-bold lg:px-3 text-customGreen-200">
+              Source
+            </th>
+            {head.map((item) => (
+              <th className="w-32 px-1 py-4 text-sm font-bold lg:px-3 text-customGreen-200">
+                {item}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="border-b-2">
+            <td className="w-8 px-2 py-4">
+              <div className="flex justify-center">
+                <Dustbin className="cursor-not-allowed opacity-40" />
+              </div>
+            </td>
+            <td className="px-2 py-4 text-sm font-semibold text-[#252F40]">
+              Source
+            </td>
+            {test2.map((x) => (
+              <td className="px-2 py-4 text-sm font-normal text-center text-[#252F40] hover:bg-[#1FC39E] hover:text-white cursor-auto">
+                <div className="flex justify-center gap-2">
+                  {x}
+                  <Expand />
+                </div>
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+    </>
   );
-};
+}
