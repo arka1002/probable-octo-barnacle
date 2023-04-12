@@ -51,7 +51,6 @@ function App() {
       <CapTable />
       {/* <EditableRow /> */}
       {/* <ReadOnlyRow /> */}
-      <CapTable />
     </>
   );
 }

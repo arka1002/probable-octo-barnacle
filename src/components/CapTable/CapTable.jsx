@@ -26,7 +26,7 @@ const CapTable = () => {
     <div className="overflow-x-auto">
       <table className="w-full">
         <thead className=" border-b border-customGreen-200">
-          <tr className="bg-slate-300">
+          <tr className="">
             <td></td>
             <td></td>
 
