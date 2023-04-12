@@ -12,6 +12,8 @@ import SourceTable from "./components/Expenses/SourceTable";
 import Expenses from "./components/IncomeStatement/Expenses";
 import Table from "./components/Table";
 import RevenueTable from "./components/IncomeStatement/RevenueTable";
+import EditableRow from "./components/CapTable/EditableRow";
+import ReadOnlyRow from "./components/CapTable/ReadOnly";
 
 function App() {
   return (
@@ -39,7 +41,9 @@ function App() {
       <div className="mt-4"><NavTabs /></div> */}
       {/* <SourceTable/> */}
       {/* <Expenses/> */}
-      <RevenueTable />
+      {/* <RevenueTable /> */}
+      <EditableRow />
+      <ReadOnlyRow />
     </>
   );
 }
