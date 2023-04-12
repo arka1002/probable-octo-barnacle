@@ -7,7 +7,7 @@ import { ReactComponent as DeleteIcon } from "../../assets/delete.svg";
 
 const ReadOnlyRow = ({ onClick }) => {
   return (
-    <tr className="border-b-2 flex items-center">
+    <>
       <td>
         <DeleteIcon className="cursor-pointer ml-3" />
       </td>
@@ -66,7 +66,7 @@ const ReadOnlyRow = ({ onClick }) => {
           ) : null}
         </div>
       </td> */}
-    </tr>
+    </>
   );
 };
 
