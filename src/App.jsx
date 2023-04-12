@@ -47,14 +47,13 @@ function App() {
       {/* <RevenueTable /> */}
       {/* <RevenueTable />
       <Revenue /> */}
+
+      <CapTable />
       {/* <EditableRow /> */}
       {/* <ReadOnlyRow /> */}
-      <CapTable />
-      <EditableRow />
-      <ReadOnlyRow />
-      <RevenueTable />
-      <Revenue />
-      <Ebita />
+      {/* <RevenueTable /> */}
+      {/* <Revenue /> */}
+      {/* <Ebita /> */}
     </>
   );
 }

@@ -27,8 +27,8 @@ const CapTable = () => {
       <table className="w-full">
         <thead className=" border-b border-customGreen-200">
           <tr className="bg-slate-300">
-            <td></td>
-            <td></td>
+            <th></th>
+            <th></th>
             {headingList.map((item, i) => (
               <th
                 className={
@@ -90,7 +90,7 @@ const CapTable = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="w-full">
+          <tr className="bg-slate-400">
             <td>
               {!toggle ? (
                 <ReadOnlyRow onClick={() => ToggleBtn()} />
