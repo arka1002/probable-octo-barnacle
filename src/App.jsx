@@ -13,6 +13,7 @@ import Expenses from "./components/IncomeStatement/Expenses";
 import Table from "./components/Table";
 import RevenueTable from "./components/IncomeStatement/RevenueTable";
 import Revenue from "./components/IncomeStatement/Revenue";
+import Ebita from "./components/IncomeStatement/Ebitda";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       {/* <Expenses/> */}
       <RevenueTable />
       <Revenue/>
+      <Ebita/>
     </>
   );
 }
