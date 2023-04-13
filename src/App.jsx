@@ -56,7 +56,7 @@ function App() {
       {/* <CapTable /> */}
 
       {/* <RTable /> */}
-      <AccordianItem />
+      <AccordianItem></AccordianItem>
       {/* <BurnAnalysis /> */}
       {/* <BTable /> */}
     </>
