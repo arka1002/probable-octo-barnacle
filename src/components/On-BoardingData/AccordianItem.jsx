@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import { ReactComponent as ArrowDown } from "../../assets/ArrowDown.svg";
 
-const AcccordianItem = () => {
+const AcccordianItem = ({ children }) => {
   const [toggle, setToggle] = useState(false);
 
   function TogAccordian() {
@@ -12,7 +12,7 @@ const AcccordianItem = () => {
     <div
       className={
         "  py-2 mb-8 px-3  rounded-lg shadow-lg " +
-        (toggle === true ? " bg-white text-black " : " gradient-bg text-white")
+        (toggle === true ? " bg-white text-black " : "gradient-bg text-white")
       }
     >
       <div
@@ -38,7 +38,7 @@ const AcccordianItem = () => {
           </span>
         </h2>
       </div>
-      {toggle === true && <div className="mx-0">ON-Boarding data</div>}
+      {toggle === true && <div className="mx-0">{children}</div>}
     </div>
   );
 };
