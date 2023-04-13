@@ -1,7 +1,7 @@
 import React, { Children, useState } from "react";
 import { ReactComponent as ArrowDown } from "../../assets/ArrowDown.svg";
 
-const AcccordianItem = ({ children }) => {
+const AcccordianItem = ({ children, title }) => {
   const [toggle, setToggle] = useState(false);
 
   function TogAccordian() {
@@ -22,7 +22,7 @@ const AcccordianItem = ({ children }) => {
         }
       >
         <h2 className={"inline text-xl  font-semi"}>
-          Revenue Streams
+          {title}
           <span className=" float-right">
             {toggle === true ? (
               <ArrowDown
