@@ -21,6 +21,8 @@ import RTable from "./components/Revenue/RTable";
 // import BurnAnalysis from "./components/BurnAnalysis/BurnAnalysis";
 // import BTable from "./components/BurnAnalysis/BTable";
 
+import AccordianItem from "./components/On-BoardingData/AccordianItem";
+
 function App() {
   return (
     <>
@@ -53,7 +55,8 @@ function App() {
       {/* <ReadOnlyRow /> */}
       {/* <CapTable /> */}
 
-      <RTable />
+      {/* <RTable /> */}
+      <AccordianItem />
       {/* <BurnAnalysis /> */}
       {/* <BTable /> */}
     </>
