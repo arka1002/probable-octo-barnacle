@@ -23,6 +23,8 @@ import RTable from "./components/Revenue/RTable";
 
 import AccordianItem from "./components/On-BoardingData/AccordianItem";
 import OnBoardingData from "./components/On-BoardingData";
+import Expenses from "./components/On-BoardingData/Expenses";
+import InputIcon from "./components/On-BoardingData/InputIcon";
 
 function App() {
   return (
@@ -59,7 +61,11 @@ function App() {
       {/* <RTable /> */}
 
       {/* <RevenueStreams /> */}
-      <OnBoardingData />
+      {/* <OnBoardingData /> */}
+      <AccordianItem>
+        <Expenses/>
+      </AccordianItem>
+      {/* <InputIcon/> */}
 
       {/* <BurnAnalysis /> */}
       {/* <BTable /> */}
