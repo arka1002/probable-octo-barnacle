@@ -5,7 +5,7 @@ import RevenueStreams from "./RevenueStreams";
 const OnBoardingData = () => {
   return (
     <div>
-      <AcccordianItem>
+      <AcccordianItem title="Revenue Stream">
         <RevenueStreams />
       </AcccordianItem>
     </div>
