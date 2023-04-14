@@ -51,7 +51,7 @@ export default function DCF() {
                     <tbody>
                         {items.map(item => (
                             <>
-                                <tr className="border-b">
+                                <tr className="border-b" onDoubleClick={() => changeMode(item.year)}>
                                     <td className="grid place-items-center py-4">
 
                                         {edit === item.year ? (
@@ -66,9 +66,9 @@ export default function DCF() {
 
 
                                     {edit === item.year ? (<td className="text-center py-4 font-semibold text-sm text-gray-600">
-                                        <input type="text" pattern="[0-9]" id="discountedrate" class="w-28 border-none outline-none text-center focus:shadow-outline  bg-gray-200 p-1 rounded font-normal focus:ring-1 text-md focus:ring-gray-400" defaultValue={item.year} />
+                                        <input type="text" pattern="[0-9]" id="discountedrate" class="w-28 border-none outline-none text-center focus:shadow-outline  bg-gray-200 p-1 rounded font-normal focus:ring-1 text-md focus:ring-gray-400" defaultValue={item.discountRate} />
                                     </td>) : (
-                                        <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.year}</td>
+                                        <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.discountRate}</td>
                                     )}
 
                                     {edit === item.year ? (<td className="text-center py-4 font-semibold text-sm text-gray-600">

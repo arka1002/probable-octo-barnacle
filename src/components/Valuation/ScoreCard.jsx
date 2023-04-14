@@ -1,9 +1,19 @@
 import { ReactComponent as Plus } from "../../assets/plus.svg";
 import { ReactComponent as Pen } from "../../assets/pen.svg";
+import { ReactComponent as Save } from "../../assets/save.svg";
+import { useState } from "react";
 
 
 
 export default function SC() {
+    const [edit, setEdit] = useState('nonedit')
+    function changeMode(params) {
+        if (edit !== `${params}`) {
+            setEdit(`${params}`)
+        } else {
+            setEdit('nonedit')
+        }
+    }
     const data = {
         headers: [
             "Value Driver",
@@ -45,11 +55,27 @@ export default function SC() {
                     <tbody>
                         {items.map(item => (
                             <>
-                                <tr>
-                                    <td className="grid place-items-center py-4"><Pen /></td>
+                                <tr onDoubleClick={() => changeMode(item.valueDriver)}>
+                                    <td className="grid place-items-center py-4">
+                                        {edit === item.valueDriver ? (
+                                            <Save onClick={() => changeMode(item.valueDriver)} className='text-[#979797] text-center cursor-pointer' />
+                                        ) : (
+                                            <Pen onClick={() => changeMode(item.valueDriver)} />
+                                        )}
+                                    </td>
                                     <td className="text-center py-4 px-1 lg:px-3 font-normal text-sm text-gray-600">{item.valueDriver}</td>
-                                    <td className="text-center py-4 px-1 lg:px-3 font-normal text-sm text-gray-600">{item.weight}</td>
-                                    <td className="text-center py-4 px-1 lg:px-3 font-normal text-sm text-gray-600">{item.yvs}</td>
+                                    
+                                    {edit === item.valueDriver ? (<td className="text-center py-4 font-semibold text-sm text-gray-600">
+                                        <input type="text" pattern="[0-9]" id="discountedrate" class="w-28 border-none outline-none text-center focus:shadow-outline  bg-gray-200 p-1 rounded font-normal focus:ring-1 text-md focus:ring-gray-400" defaultValue={item.weight} />
+                                    </td>) : (
+                                        <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.weight}</td>
+                                    )}
+                                    {edit === item.valueDriver ? (<td className="text-center py-4 font-semibold text-sm text-gray-600">
+                                        <input type="text" pattern="[0-9]" id="discountedrate" class="w-28 border-none outline-none text-center focus:shadow-outline  bg-gray-200 p-1 rounded font-normal focus:ring-1 text-md focus:ring-gray-400" defaultValue={item.yvs} />
+                                    </td>) : (
+                                        <td className="text-center py-4 font-semibold text-sm text-gray-600">{item.yvs}</td>
+                                    )}
+                                    
                                     <td className="text-center py-4 px-1 lg:px-3 font-normal text-sm text-gray-600">{item.factor}</td>
                                 </tr>
                             </>
