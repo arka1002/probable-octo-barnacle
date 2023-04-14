@@ -6,7 +6,7 @@
 // import PieChart from "./components/Dashboard/PieChart"
 // import LineChart from "./components/Dashboard/LineChart"
 // import SliderSection from "./components/Dashboard/SliderSection"
-// import NavTabs from "./components/Valuation/NavTabs"
+import NavTabs from "./components/Valuation/NavTabs"
 
 // import SourceTable from "./components/Expenses/SourceTable";
 // import Expenses from "./components/IncomeStatement/Expenses";
@@ -59,12 +59,12 @@ function App() {
       {/* <CapTable /> */}
 
       {/* <RTable /> */}
-
+      <NavTabs/>
       {/* <RevenueStreams /> */}
       {/* <OnBoardingData /> */}
-      <AccordianItem>
+      {/* <AccordianItem>
         <Expenses/>
-      </AccordianItem>
+      </AccordianItem> */}
       {/* <InputIcon/> */}
 
       {/* <BurnAnalysis /> */}
