@@ -15,7 +15,7 @@ import NavTabs from "./components/Valuation/NavTabs"
 // import EditableRow from "./components/CapTable/EditableRow";
 // import ReadOnlyRow from "./components/CapTable/ReadOnly";
 // import Revenue from "./components/IncomeStatement/Revenue";
-// import CapTable from "./components/CapTable/CapTable";
+import CapTable from "./components/CapTable/CapTable";
 // import Ebita from "./components/IncomeStatement/Ebitda";
 import RTable from "./components/Revenue/RTable";
 // import BurnAnalysis from "./components/BurnAnalysis/BurnAnalysis";
@@ -56,17 +56,17 @@ function App() {
       {/* <Revenue /> */}
       {/* <EditableRow /> */}
       {/* <ReadOnlyRow /> */}
-      {/* <CapTable /> */}
+      <CapTable />
 
       {/* <RTable /> */}
-      <NavTabs/>
+      {/* <NavTabs/> */}
       {/* <RevenueStreams /> */}
       {/* <OnBoardingData /> */}
       {/* <AccordianItem>
         <Expenses/>
       </AccordianItem> */}
       {/* <InputIcon/> */}
-
+      
       {/* <BurnAnalysis /> */}
       {/* <BTable /> */}
     </>

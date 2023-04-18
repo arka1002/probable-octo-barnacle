@@ -91,7 +91,7 @@ const CapTable = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="w-full">
+          <tr className="w-full" onDoubleClick={() => ToggleBtn()}>
             {!toggle ? (
               <ReadOnlyRow onClick={() => ToggleBtn()} />
             ) : (
